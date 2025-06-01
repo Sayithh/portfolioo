@@ -1,11 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/autoplay';
 
 const tools = [
   { name: 'MySQL/MariaDB', icon: '/assets/icons/mysql.svg' },
@@ -13,14 +11,11 @@ const tools = [
   { name: 'Win\'Design', icon: '/assets/icons/windesign.svg' },
   { name: 'Linux Debian', icon: '/assets/icons/debian.svg' },
   { name: 'Docker', icon: '/assets/icons/docker.svg' },
-  { name: 'Apache', icon: '/assets/icons/apache.svg' },
-  { name: 'WSL2', icon: '/assets/icons/wsl.svg' },
   { name: 'Tailwind', icon: '/assets/icons/tailwind.svg' },
   { name: 'Bootstrap', icon: '/assets/icons/bootstrap.svg' },
   { name: 'WordPress', icon: '/assets/icons/wordpress.svg' },
   { name: 'Elementor PRO', icon: '/assets/icons/elementor.svg' },
   { name: 'VueJS', icon: '/assets/icons/vue.svg' },
-  { name: 'HTMX', icon: '/assets/icons/htmx.svg' },
   { name: 'Visual Studio', icon: '/assets/icons/visualstudio.svg' },
   { name: 'Trello', icon: '/assets/icons/trello.svg' },
   { name: 'GitLab', icon: '/assets/icons/gitlab.svg' },
@@ -38,20 +33,16 @@ export default function ToolsSlider() {
           spaceBetween={30}
           slidesPerView={2}
           loop={true}
+          speed={5000}                      // <- vitesse de défilement (en ms) pour un scrolling lent
           autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 0,                       // <- pas de pause entre chaque transition
+            disableOnInteraction: false,   // <- continue même après interaction
           }}
+          allowTouchMove={false}           // <- désactive le glissement manuel (optionnel)
           breakpoints={{
-            640: {
-              slidesPerView: 3,
-            },
-            768: {
-              slidesPerView: 4,
-            },
-            1024: {
-              slidesPerView: 6,
-            },
+            640:  { slidesPerView: 3 },
+            768:  { slidesPerView: 4 },
+            1024: { slidesPerView: 6 },
           }}
           className="tools-slider"
         >
@@ -74,4 +65,4 @@ export default function ToolsSlider() {
       </div>
     </section>
   );
-} 
+}
