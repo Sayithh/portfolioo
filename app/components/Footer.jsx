@@ -1,34 +1,34 @@
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Portfolio - Tous droits réservés.
-          </p>
-          
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="https://github.com/votre-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-light transition-colors duration-200"
-              aria-label="GitHub"
-            >
-              <FiGithub className="h-6 w-6" />
-            </a>
-            <a
-              href="https://linkedin.com/in/votre-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-light transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin className="h-6 w-6" />
-            </a>
+          <div className="mb-6 md:mb-0">
+            <p className="text-lg font-semibold">Enzo Paquereau</p>
+            <p className="text-gray-400">Développeur Web</p>
           </div>
+          
+          <nav className="flex flex-wrap gap-6">
+            <Link href="/" className="hover:text-primary-light transition-colors">
+              Accueil
+            </Link>
+            <Link href="#competences" className="hover:text-primary-light transition-colors">
+              Compétences
+            </Link>
+            <Link href="/contact" className="hover:text-primary-light transition-colors">
+              Contact
+            </Link>
+            <Link href="/mentions-legales" className="hover:text-primary-light transition-colors">
+              Mentions légales
+            </Link>
+          </nav>
+        </div>
+        
+        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Enzo Paquereau. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
