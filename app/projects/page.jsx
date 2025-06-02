@@ -31,7 +31,7 @@ export default function Projects() {
     {
       title: 'Site de gestion interne note de frais',
       description: 'Une plateforme intranet dédiée au suivi des frais professionnels pour une entreprise fictive.',
-      imageUrl: '/projects/gestion.png',
+      imageUrl: '/assets/images/gestion.png',
       techs: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'JavaScript'],
       link: '/projects/projet2',
     },
