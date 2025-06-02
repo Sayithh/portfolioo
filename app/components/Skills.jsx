@@ -18,7 +18,6 @@ export default function Skills() {
         <h2 className="text-3xl font-bold mb-12 text-center">Compétences</h2>
         
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Langages et Frameworks</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {skills.map((skill) => (
               <div key={skill.name} className="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">

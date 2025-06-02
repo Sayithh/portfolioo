@@ -3,6 +3,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import ToolsSlider from './components/ToolsSlider';
 import ContactForm from './components/ContactForm';
+import CTASection from './components/CTASection';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Skills />
       <ToolsSlider />
+      <CTASection />
       <ContactForm />
     </main>
   );

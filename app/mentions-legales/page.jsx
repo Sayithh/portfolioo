@@ -7,7 +7,7 @@ export default function MentionsLegales() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">1. Informations Générales</h2>
         <p>Propriétaire du site : Enzo Paquereau</p>
-        <p>Email : contact@monemail.com</p>
+        <p>Email : enzopaquereau@gmail.com</p>
       </section>
 
       <section className="mb-8">

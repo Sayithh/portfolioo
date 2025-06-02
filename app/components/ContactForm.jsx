@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ isFullPage = false }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -12,8 +12,14 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici, vous pouvez faire un console.log ou appeler une API
-    console.log({ name, email, subject, message });
+    const formData = new FormData(e.target);
+    const subject = formData.get('subject') || 'Contact depuis le portfolio';
+    const body = `
+      Nom: ${formData.get('name')}
+      Email: ${formData.get('email')}
+      Message: ${formData.get('message')}
+    `;
+    window.location.href = `mailto:enzopaquereau@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
@@ -26,69 +32,71 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label htmlFor="name" className="block font-medium">
-          Nom
-        </label>
-        <input
-          type="text"
-          id="name"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="mt-1 block w-full rounded border-gray-300 py-2 px-3 focus:outline-none focus:ring focus:ring-indigo-200 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-indigo-600"
-        />
-      </div>
+    <section className={`py-16 ${isFullPage ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-900'}`}>
+      <div className={`${isFullPage ? 'max-w-3xl' : 'max-w-2xl'} mx-auto px-4 sm:px-6 lg:px-8`}>
+        <h2 className={`${isFullPage ? 'text-3xl font-bold mb-8' : 'text-2xl font-semibold mb-6'} text-center text-gray-900 dark:text-white`}>
+          {isFullPage ? 'Envoyez-moi un message' : 'Contactez-moi'}
+        </h2>
+        
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 flex flex-col space-y-4"
+        >
+          <label className="flex flex-col">
+            <span className="text-sm font-medium mb-1 text-gray-700 dark:text-gray-200">Nom</span>
+            <input
+              type="text"
+              name="name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            />
+          </label>
 
-      <div>
-        <label htmlFor="email" className="block font-medium">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 block w-full rounded border-gray-300 py-2 px-3 focus:outline-none focus:ring focus:ring-indigo-200 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-indigo-600"
-        />
-      </div>
+          <label className="flex flex-col">
+            <span className="text-sm font-medium mb-1 text-gray-700 dark:text-gray-200">Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            />
+          </label>
 
-      <div>
-        <label htmlFor="subject" className="block font-medium">
-          Sujet
-        </label>
-        <input
-          type="text"
-          id="subject"
-          required
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-          className="mt-1 block w-full rounded border-gray-300 py-2 px-3 focus:outline-none focus:ring focus:ring-indigo-200 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-indigo-600"
-        />
-      </div>
+          <label className="flex flex-col">
+            <span className="text-sm font-medium mb-1 text-gray-700 dark:text-gray-200">Sujet</span>
+            <input
+              type="text"
+              name="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            />
+          </label>
 
-      <div>
-        <label htmlFor="message" className="block font-medium">
-          Message
-        </label>
-        <textarea
-          id="message"
-          required
-          rows={4}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="mt-1 block w-full rounded border-gray-300 py-2 px-3 focus:outline-none focus:ring focus:ring-indigo-200 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:focus:ring-indigo-600"
-        />
-      </div>
+          <label className="flex flex-col">
+            <span className="text-sm font-medium mb-1 text-gray-700 dark:text-gray-200">Message</span>
+            <textarea
+              name="message"
+              rows={isFullPage ? "6" : "5"}
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+            ></textarea>
+          </label>
 
-      <button
-        type="submit"
-        className="inline-block rounded bg-indigo-600 py-2 px-4 text-white hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-200 dark:bg-indigo-500 dark:hover:bg-indigo-600 dark:focus:ring-indigo-600"
-      >
-        Envoyer
-      </button>
-    </form>
+          <button
+            type="submit"
+            className="self-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition-colors duration-200"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }

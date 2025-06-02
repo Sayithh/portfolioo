@@ -14,13 +14,13 @@ export default function Hero() {
       </div>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Bonjour, je suis Enzo Paquereau
+          Enzo Paquereau
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
           Étudiant en BTS SIO - SLAM
         </h2>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-400">
-          Développeur web passionné par la création d'expériences numériques modernes et intuitives.
+            Développeur web/logiciel passionné, je conçois des projets numériques modernes, simples et agréables à utiliser.
         </p>
       </div>
     </section>
