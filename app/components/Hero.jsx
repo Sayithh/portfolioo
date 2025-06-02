@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-primary-light to-primary-dark text-white pt-20 pb-32">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
           Enzo Paquereau
         </h1>

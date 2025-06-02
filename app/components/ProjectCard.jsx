@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import { FiExternalLink } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function ProjectCard({ title, description, imageUrl, techs, link }) {
   return (
-    <a
+    <Link
       href={link}
-      target="_blank"
-      rel="noopener noreferrer"
       className="block group"
     >
       <div className="card overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -40,6 +39,6 @@ export default function ProjectCard({ title, description, imageUrl, techs, link 
           ))}
         </div>
       </div>
-    </a>
+    </Link>
   );
 } 

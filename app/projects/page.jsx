@@ -29,11 +29,11 @@ export default function Projects() {
       link: 'https://blog-epaquereau.netlify.app',
     }, 
     {
-      title: 'Portfolio Personnel',
-      description: 'Site portfolio moderne avec mode sombre et animations fluides.',
-      imageUrl: '/projects/portfolio.jpg',
-      techs: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      link: 'https://github.com/username/portfolio',
+      title: 'Site de gestion interne note de frais',
+      description: 'Une plateforme intranet dédiée au suivi des frais professionnels pour une entreprise fictive.',
+      imageUrl: '/projects/gestion.png',
+      techs: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'JavaScript'],
+      link: '/projects/projet2',
     },
   ];
 
