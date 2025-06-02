@@ -68,44 +68,6 @@ export default function Projet2() {
         </div>
       </section>
 
-      {/* Section Screenshots */}
-      <section className="mb-12">
-        <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
-          Captures d'écran de l'application
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <Image
-            src="/assets/images/intranet1.png"
-            alt="Tableau de bord employé"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-md"
-          />
-          <Image
-            src="/assets/images/intranet2.png"
-            alt="Interface de validation des responsables"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-md"
-          />
-        </div>
-      </section>
-
-      {/* Section Technologies */}
-      <section className="mb-12">
-        <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
-          Technologies utilisées
-        </h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li>React.js (Frontend)</li>
-          <li>Node.js & Express (Backend)</li>
-          <li>MongoDB (Base de données)</li>
-          <li>JWT (Authentification)</li>
-          <li>PDF.js (Génération de documents)</li>
-          <li>Material-UI (Interface utilisateur)</li>
-        </ul>
-      </section>
-
       {/* Section Conclusion */}
       <section>
         <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
