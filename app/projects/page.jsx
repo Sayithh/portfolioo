@@ -15,19 +15,19 @@ export default function Projects() {
       link: 'https://asti49.com',
     },
     {
+      title: 'Les Folies de Louise',
+      description: 'Application Lourde :Gestion desktop C# (commandes, stocks, personnel)',
+      imageUrl: '/projects/application.png',
+      techs: ['C#', 'Entity Framework', 'MySQL'],
+      link: '/projects/projet1',
+    },
+    {
       title: 'Blog Informatique',
       description: 'Premier site web conçu il y a 2 ans dans le cadre des Ateliers de Professionnalisation de ma formation. Il s’agit d’un blog simple.',
       imageUrl: '/assets/images/blog.png',
       techs: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://blog-epaquereau.netlify.app',
-    },
-    {
-      title: 'Les Folies de Louise',
-      description: 'Application Lourde : Gestion desktop C# (commandes, stocks, personnel)',
-      imageUrl: '/projects/application.png',
-      techs: ['C#', 'Entity Framework', 'MySQL'],
-      link: '/projects/projet1',
-    },
+    }, 
     {
       title: 'Portfolio Personnel',
       description: 'Site portfolio moderne avec mode sombre et animations fluides.',

@@ -20,7 +20,7 @@ export default function Hero() {
           Étudiant en BTS SIO - SLAM
         </h2>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-400">
-            Développeur web/logiciel passionné, je conçois des projets numériques modernes, simples et agréables à utiliser.
+          Développeur web/logiciel passionné, je conçois des projets numériques modernes.
         </p>
       </div>
     </section>
