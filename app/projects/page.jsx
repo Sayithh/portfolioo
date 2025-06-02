@@ -8,11 +8,11 @@ export const metadata = {
 export default function Projects() {
   const projects = [
     {
-      title: 'E-commerce Modern',
-      description: 'Une plateforme e-commerce moderne avec panier, paiement et gestion des commandes.',
-      imageUrl: '/projects/ecommerce.jpg',
-      techs: ['Next.js', 'Stripe', 'Tailwind CSS', 'MongoDB'],
-      link: 'https://github.com/username/ecommerce',
+      title: 'ASTI49 – Site moderne et responsive',
+      description: 'ASTI49 est un site vitrine élégant et fonctionnel, conçu sous WordPress avec Elementor Pro pour offrir une expérience utilisateur fluide.',
+      imageUrl: '/assets/images/asti49.png',
+      techs: ['Wordpress', 'Elementor Pro', 'Figma'],
+      link: 'https://asti49.com',
     },
     {
       title: 'Dashboard Analytics',
