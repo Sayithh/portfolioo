@@ -140,27 +140,47 @@ export default function Projet1() {
           Captures d'écran de l'application
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-          {/* Remplacer ces div par des composants Image une fois les captures disponibles :
+          {
               <Image
-                src="/assets/screenshots/app1.png"
+                src="/assets/images/screen4.PNG"
                 alt="Description de la capture"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-md"
               /> 
-          */}
-          <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Interface de gestion des commandes</span>
-          </div>
-          <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Tableau de bord des stocks</span>
-          </div>
-          <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Gestion des employés</span>
-          </div>
-          <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Interface de facturation</span>
-          </div>
+              
+          }
+          {
+              <Image
+                src="/assets/images/screen.PNG"
+                alt="Description de la capture"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md"
+              /> 
+              
+          }
+          {
+              <Image
+                src="/assets/images/screen2.PNG"
+                alt="Description de la capture"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md"
+              /> 
+              
+          }
+          {
+              <Image
+                src="/assets/images/screen3.PNG"
+                alt="Description de la capture"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md"
+              /> 
+              
+          }
+          
         </div>
       </section>
 

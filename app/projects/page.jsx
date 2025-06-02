@@ -16,8 +16,8 @@ export default function Projects() {
     },
     {
       title: 'Les Folies de Louise',
-      description: 'Application Lourde :Gestion desktop C# (commandes, stocks, personnel)',
-      imageUrl: '/projects/application.png',
+      description: 'Application Lourde : Gestion desktop C# (commandes, stocks, personnel)',
+      imageUrl: '/assets/images/blog.png',
       techs: ['C#', 'Entity Framework', 'MySQL'],
       link: '/projects/projet1',
     },
