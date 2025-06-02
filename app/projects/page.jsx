@@ -16,17 +16,17 @@ export default function Projects() {
     },
     {
       title: 'Blog Informatique',
-      description: 'Mon premier site qui a été conçu il y a 2 ans dans le cadre des Ateliers de Professionnalisation de ma formation. Il s’agit d’un blog simple.',
+      description: 'Premier site web conçu il y a 2 ans dans le cadre des Ateliers de Professionnalisation de ma formation. Il s’agit d’un blog simple.',
       imageUrl: '/assets/images/blog.png',
       techs: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://blog-epaquereau.netlify.app',
     },
     {
-      title: 'Application Mobile',
-      description: 'Application mobile de gestion de tâches avec synchronisation cloud.',
-      imageUrl: '/projects/mobile-app.jpg',
-      techs: ['React Native', 'Firebase', 'Redux', 'Expo'],
-      link: 'https://github.com/username/mobile-app',
+      title: 'Les Folies de Louise',
+      description: 'Application Lourde : Gestion desktop C# (commandes, stocks, personnel)',
+      imageUrl: '/projects/application.png',
+      techs: ['C#', 'Entity Framework', 'MySQL'],
+      link: '/projects/projet1',
     },
     {
       title: 'Portfolio Personnel',

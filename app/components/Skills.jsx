@@ -32,7 +32,7 @@ export default function Skills() {
                 <h4 className="text-lg font-medium text-center">{skill.name}</h4>
                 {skill.details && (
                   <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-1">
-                    {skill.details}
+                  
                   </p>
                 )}
               </div>
