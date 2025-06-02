@@ -8,18 +8,18 @@ export const metadata = {
 export default function Projects() {
   const projects = [
     {
-      title: 'ASTI49 – Site moderne et responsive',
-      description: 'ASTI49 est un site vitrine élégant et fonctionnel, conçu sous WordPress avec Elementor Pro pour offrir une expérience utilisateur fluide.',
+      title: 'Site moderne et responsive',
+      description: 'Site web responsive pour une entreprise nommée ASTI49, conçu sous WordPress avec Elementor Pro pour offrir une expérience utilisateur fluide.',
       imageUrl: '/assets/images/asti49.png',
       techs: ['Wordpress', 'Elementor Pro', 'Figma'],
       link: 'https://asti49.com',
     },
     {
-      title: 'Dashboard Analytics',
-      description: 'Dashboard interactif pour visualiser et analyser les données en temps réel.',
-      imageUrl: '/projects/dashboard.jpg',
-      techs: ['React', 'D3.js', 'Node.js', 'PostgreSQL'],
-      link: 'https://github.com/username/dashboard',
+      title: 'Blog Informatique',
+      description: 'Mon premier site qui a été conçu il y a 2 ans dans le cadre des Ateliers de Professionnalisation de ma formation. Il s’agit d’un blog simple.',
+      imageUrl: '/assets/images/blog.png',
+      techs: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://blog-epaquereau.netlify.app',
     },
     {
       title: 'Application Mobile',
